@@ -1,4 +1,4 @@
-package car;
+package section7.car;
 
 public class Car {
 	// 라이브러리용 클래스

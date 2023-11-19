@@ -1,4 +1,4 @@
-package car;
+package section7.car;
 
 public class Main {
 
