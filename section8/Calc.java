@@ -2,13 +2,15 @@ package section8;
 
 public class Calc {
 	// 라이브러리용
-	
+
 	// 두 수의 합을 계산해서 출력하는 메서드
-	void sum(int num1, int num2) {
-		//두개의 정수값을 받고 합을 출력함(반환필요 X)
+	void sum(int num1, int num2){	// 매개변수, 파라미터
+		// 두 개의 정수 값을 받고 합을 출력하는 메서드 (반환할 필요 없음)
 		System.out.println(num1+num2);
 	}
-	
+
+	System.out.println("===================================");
+
 	// 배열의 합을 구하는 메서드
 	void arrSum(int[] arr) {
 		//배열의 합 코드

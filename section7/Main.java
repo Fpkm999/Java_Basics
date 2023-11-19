@@ -57,6 +57,10 @@ public class Main {
 		// 값이 둘다 변해버렸다. 왜그럴까?
 		// 범인은 static 라서 그렇다. static 이 안붙은 Family2 클래스로 테스트해보자.
 
+		//  static이 붙은 정적 멤버는 클래스명으로도 접근이 가능하고 이렇게 접근하는 것을 추천한다.
+		System.out.println(Family.address);
+
+
 		Family2 family2 = new Family2();	// 객체 생성
 
 		System.out.println("거주지 : "+family2.address);	// 일단 거주지는 대구로 설정되어있다.

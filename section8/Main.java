@@ -5,37 +5,39 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-//		//실행용
+		// TITLE : 메서드 연습
+		// 실행용
 		
-//		//1. Method.class
+		// Method.class
 		Method method = new Method();//	객체 생성
-		
-//		Scanner sc = new Scanner(System.in); <--이것도 매개변수임
-		
+
+		Scanner sc = new Scanner(System.in); // ()안에 요소들은 매개변수이다.
+
 		method.tvName ="삼성";	//	필드에 값 대입
-//		
+
 		method.turnOn();	// turnOn 메서드를 호출
 		
 		method.turnOff();   // turnOff 메서드를 호출
-//		
+
 		method.nowChannel(7);
 		
 		
 		System.out.println("=======================");
-		
-//		//계산기 클래스 만들자
-//		//2. Calc.class
+		// TITLE : 메서드 활용2
+		// 계산기 클래스 만들자
+		//Calc.class
 		Calc calc = new Calc();
 		
-		calc.sum(3, 2);//ctrl 로 sum 메서드 누르면 해당 클래스로 이동됨
-//		//여기서3,2와 같은 것을 Argument, 인자라고 함
-//		// 메서드에서 받는 것은 매개변수, 파라미터
-//		// 메서드를 호출 할 때 Argument, 인자
+		calc.sum(3, 2);
+		// ctrl 로 sum 메서드 누르면 해당 클래스로 이동됨
+		// 여기서3,2와 같은 것을 Argument, 인자라고 함
+		// 메서드에서 받는 것은 매개변수, 파라미터
+		// 메서드를 호출 할 때 Argument, 인자
 		
 		
 		System.out.println("=======================");
 
-		//3. Student.class
+		//Student.class
 		Student student = new Student();//객체 생성
 		
 		student.introduce("김문식", 24);

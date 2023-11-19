@@ -8,25 +8,23 @@ package section8;
 public class Method {
 	// 라이브러리용
 	// 필드
-	String tvName;	//	TV 이름
-	
+	String tvName;	// TV 이름
+
 	// 메서드
-	// TV 켜는 메서드
+	// TV를 켜는 메서드
 	void turnOn() {
-		System.out.println(tvName + "TV를 켜다");
+		System.out.println(tvName + "TV를 켜다.");
 	}
-	
-	
-	// TV 끄는 메서드
-	void turnOff() {
-		System.out.println(tvName + "TV를 끄다");
-	}		
-		
-	// TV의 현재 채널을 출력하는 메서드
-	// 반환타입 메서드명(매개변수)
-	//  반환타입 메서드명(자료형 변수명) <-- 위아래 동일한 말임
-	void nowChannel(int channel1) {
-		System.out.println("현재 채널은 : " + channel1);
+
+	void turnOff () {
+			System.out.println(tvName + "TV를 끄다.");
+		}
+
+		// TV의 현재 채널을 출력하는 메서드
+		// 반환타입 메서드명(매개변수)
+		// 반환타입 메서드명(자료형 변수명) //23,24줄 둘다 동일한 말임
+	void nowChannel (int channel){
+		System.out.println("현재 채널은 : "+channel);
 	}
 
 }
