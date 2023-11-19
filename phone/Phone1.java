@@ -14,30 +14,25 @@ public class Phone1 {
 	// 생성자
 	Phone1(){
 	}
-	Phone1(String pbrand){
-		brand = pbrand;
+	Phone1(String brand){
+		this.brand = brand;
 	}
-//	Phone1(String pcolor){	//이건 아예 안된다.
-//		color = pcolor;	// 같은 타입의 매개변수 개수일때는 안됨 
+//	Phone1(String color){	//이건 아예 안된다.
+//		this.color = color;	// 같은 타입의 매개변수  개수일때는 안됨 이름이 다르더라도 말이지..
 //	}
-	Phone1(int pseries){
-		series = pseries;
+	Phone1(int series){
+		this.series = series;
 	}
 
-	Phone1(String pbrand , int pseries){
-		brand = pbrand;
-		series = pseries;
+	Phone1(String brand , int series){
+		this.brand = brand;
+		this.series = series;
 	}
-	Phone1(int pseries, String pbrand){// 매개변수 순서가 다른건 가능하다
-		brand = pbrand;
-		series = pseries;
+	Phone1(int series, String brand){// 매개변수 순서가 다른건 가능하다
+		this.brand = brand;
+		this.series = series;
 	}
-	
-//	Phone1(String pbrand , int pseries, String pcolor){
-//		brand = pbrand;
-//		series = pseries;
-//		color = pcolor;
-//	}
+
 	Phone1(String brand , int series, String color){
 //		brand = brand;	//이렇게 하면 안된다. 양쪽
 //		series = series;// 받아온값을 받아온 변수에 넣는다.
@@ -47,11 +42,11 @@ public class Phone1 {
 		this.color = color;
 	}
 	
-	
+	//==================================================//
 	
 	// 메소드
 	void phoneInfo() {
-		System.out.println("브랜드: "+brand+", 시리즈 : "
-	+series+", 컬러 : "+color);
+		System.out.println("브랜드: "+this.brand+", 시리즈 : "
+	+this.series+", 컬러 : "+this.color);
 	}
 }
