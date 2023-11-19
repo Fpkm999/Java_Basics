@@ -1,8 +1,9 @@
 package section10;
 
 public class Main {
-
 	public static void main(String[] args) {
+		
+		// TITLE : 상속 연습
 		Comic comicBook = new Comic(); // 객체 생성
 							// 생성자 호출
 		comicBook.title = "원피스";
@@ -13,6 +14,7 @@ public class Main {
 		System.out.println("======================");
 		
 		Samsung samsungPhone = new Samsung();
+
 		Apple applePhone = new Apple();
 		
 		samsungPhone.brand = "갤럭시";
@@ -34,9 +36,14 @@ public class Main {
 		
 		System.out.println("======================");
 
-//		Comic2 comicBook3 = new Comic2("원피스", 5000, 8);
-		
+		Comic2 comicBook3 = new Comic2("원피스", 5000, 8);
+
+		// 부모 클래스에 생성자에 맞춰서 만들어 줘야 한다. 매개변수는 추가도 가능하다.
+
+		System.out.println("======================");
+
 		Notebook notebook = new Notebook();
+
 		notebook.powerOn();
 		Macbook macbook = new Macbook();
 		macbook.powerOn();
@@ -73,8 +80,8 @@ public class Main {
 		int myAge = 27;
 		myAge = 28;
 		// 상수 : 초기화 이후 값을 바꿀 수 없음
-		// 상수명은 스네이크기법을 사용함, 전체 스펠링을 대문자로 사용한다
-		final int MY_AGE = 27;//final을 붙이기전에는 변수였음. final을 붙여서 상수가됨
+		// 상수명은 스네이크 기법을 사용함, 전체 스펠링을 대문자로 사용 한다
+		final int MY_AGE = 27; // final 을 붙이기 전에는 변수 였음. final 을 붙여서 상수가 됨
 		
 //		MY_AGE = 28; 오류뜸
 		
@@ -83,5 +90,4 @@ public class Main {
 		// 암호키? 같은 곳에서 사용함
 		
 	}
-
 }

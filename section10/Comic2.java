@@ -2,8 +2,7 @@ package section10;
 
 public class Comic2 extends Book2 {
 	int series;
-	
-	Comic2 (String title, int price, int series){
+	Comic2(String title, int price, int series) {
 		super(title, price);
 		this.series = series;
 	}

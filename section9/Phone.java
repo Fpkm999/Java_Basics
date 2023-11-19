@@ -25,9 +25,7 @@ public class Phone {
 	
 	// 메서드
 	void phoneInfo() {
-		System.out.println(brand + " " +series + " " +color);
+		System.out.println("브랜드"+brand + " " +"시리즈"+series + " " +"색상"+color);
 	}
-	
-	
-	
+
 }
