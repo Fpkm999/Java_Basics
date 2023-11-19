@@ -4,9 +4,10 @@ public class Main {
 	// String[] args = 매개변수.
 	public static void main(String[] args) {
 		// 실행용 클래스. 메인 메서드
-		Car car = new Car();
+		// 기본 생성자를 이용한 방식
+		Car car = new Car();	// 객체 생성
 		
-		car.name = "그랜저";
+		car.name = "그랜저";	// nmae 필드 초기화
 	
 		car.drive();
 		
