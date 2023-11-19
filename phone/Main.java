@@ -14,6 +14,7 @@ public class Main {
 		Phone1 p5 = new Phone1("iphone", 14, "스페이스그레이");
 		
 		Scanner sc = new Scanner(System.in);
+
 		sc.nextInt();
 //	 public static final InputStream in = null;
 		System.out.println();
@@ -26,10 +27,11 @@ public class Main {
 		p5.phoneInfo();
 		
 		String name = "김김김";
+
 		name.codePointBefore(0);
 		name.charAt(0);
+		sc.close();
 	}
-
 }// 클래스 구성 3요소 : 생성자, 필드, 메서드
 // System 클래스
 // in 필드
