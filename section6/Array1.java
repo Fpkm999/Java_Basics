@@ -1,6 +1,6 @@
 package section6;
 /*
- TITLE : 배열 공부
+ TITLE : 배열 공부1
  */
 public class Array1 {
 	public static void main(String[] args) {
