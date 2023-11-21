@@ -2,7 +2,7 @@ package section12.animal;
 // 인터페이스 공부
 // 인터페이스
 public interface FourLegAnimal {
-	// 인터페이슨는 항상 public으로 구현함
+	// 인터페이스는 항상 public으로 구현함
 	// 모든 상수는 public static final
 	public static final int LEG_COUNT = 4; // 상수
 	// public static final 은 생략이 가능

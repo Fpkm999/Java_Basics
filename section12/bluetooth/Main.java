@@ -6,7 +6,7 @@ public class Main {
 		BluetoothMIC bm = new BluetoothMIC();
 		// 구현 클래스 객체 생성
 		bm.music();
-		// MicroPhone 인터페이스 메서드 재정의
+		// MicroPhone 인터페 이스 메서드 재정의
 		
 		bm.sing();
 		// Speaker  인터페이스 메서드 재정의

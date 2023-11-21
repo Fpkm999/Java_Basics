@@ -1,4 +1,4 @@
-package practiceWeb;
+package section11_2.practiceWeb;
 import java.util.Scanner;
 
 public class Main {

@@ -1,4 +1,4 @@
-package practiceWeb;
+package section11_2.practiceWeb;
 
 public class Join extends Database {
 
