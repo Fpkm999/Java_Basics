@@ -29,6 +29,11 @@ public class DataType {
 		System.out.println(i == j);
 		//String도 class
 		//int double String
+
+		String k = "JAVA";
+		String l = "JAVA";
+		System.out.println(k==l);
+
 		
 		
 	}

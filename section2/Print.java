@@ -1,7 +1,6 @@
 package section2;
 
 public class Print {
-
 	public static void main(String[] args) {
 		System.out.print("Hello");	// print : 줄바꿈 없이 출력
 		System.out.print("JAVA");

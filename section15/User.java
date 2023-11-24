@@ -5,7 +5,7 @@ public class User {
     // 필드에 값이 잘 들어왔는지 확인용으로 거의 사용함
     private String userId;
     private String userPw;
-    public void setUserId(String userId){
+        public void setUserId(String userId){
             this.userId = userId;
 
         }
@@ -15,14 +15,14 @@ public class User {
         public void setUserPw(String userPw){
             this.userPw = userPw;
 
-       }
-       public String getUserPw(){
+        }
+        public String getUserPw(){
            return  userPw;
        }
 
 
-    @Override
-    public String toString() {
+        @Override
+        public String toString() {
         return "userID : " + userId + ", userPw : " +userPw;
-    }
+        }
 }
