@@ -1,7 +1,6 @@
 package section5;
 
 public class Break {
-
 	public static void main(String[] args) {
 		// break 문 : 반복문을 미리 종료
 		// 조건식이 false 가 아니더라도 종료

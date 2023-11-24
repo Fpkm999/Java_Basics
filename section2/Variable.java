@@ -3,7 +3,7 @@ package section2;
 public class Variable {
 	public static void main(String[] args) {
 		// 변수를 선언한다
-		// 변수 : 데이터를 저장하기 위해 프로그램에 의해 이름을 할당받은 메모리 공간
+		// 변수 : 데이터를 저장하기 위해 프로그램에 의해 이름을 할당 받은 메모리 공간
 		// 즉, 데이터를 저장하기 위한 공간
 		
 		// 변수 선언 : 내가 데이터를 저장할거니까 공간을 달라

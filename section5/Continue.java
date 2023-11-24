@@ -1,7 +1,6 @@
 package section5;
 
 public class Continue {
-
 	public static void main(String[] args) {
 		// continue 문 : 반복문에서 continue를 만나면 이후의 코드는 실행하지 않고 반복문의 처음으로 돌아감
 		

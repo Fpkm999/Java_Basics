@@ -1,7 +1,6 @@
 package section6;
 
 import java.util.Arrays;
-
 /*
  TITLE : 배열 공부2
  */

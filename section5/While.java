@@ -7,16 +7,14 @@ public class While {
 //		for (int i = 1 ; i < 10; i++) {
 //			System.out.println(i);
 //		}
-//		
-//		
-//		System.out.println("=================================");
-//		
+//		System.out.println("====================================");
 //			
 //		//for문을 while 문으로 변경해보면..
+
 //		int i = 1; // for  문의 초기화 식
 //		
 //		while(i<10) { // for 문의 조건식
-//			System.out.println(i);
+//			System.out.println(i); // 실행문
 //			
 //			i++;  // for 문의 증감식
 //		}
@@ -31,7 +29,7 @@ public class While {
 		int sum = 0;
 		int i =1;
 		
-		while (i<=100) {
+		while (i <= 100) {
 			if((i%2) ==0) {
 			sum += i;
 			}
