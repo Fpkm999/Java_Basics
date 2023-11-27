@@ -2,8 +2,10 @@ package section6;
 
 import java.util.Arrays;
 /*
- TITLE : 배열 공부2
+ TITLE : 배열 공부2 #Arrays
  */
+
+// TODO Arrays 공부
 public class Arrays1 {
 	public static void main(String[] args) {
 
@@ -16,11 +18,12 @@ public class Arrays1 {
 
 		int[] arr = {10, 4, 29, 26, 21, 29, 14, 28, 26, 14};
 
-		System.out.println(Arrays.toString(arr));
+		System.out.println(Arrays.toString(arr)); // TODO Arrays.toString(배열변수명)
 		// result
 		// [10, 4, 29, 26, 21, 29, 14, 28, 26, 14]
 		// 반복문 도움 없이 출력할 수 있고, 문자열(String) 형태로 변환
 		// for 문 돌려서 일일히 출력할 필요없음
+		// [값1, 값2, 값3...] 형태로 출력됨
 
 		System.out.println("==========================================");
 
@@ -44,10 +47,10 @@ public class Arrays1 {
 		// 부분 정렬
 		Arrays.sort(intArr, 1, 4);
 
+		// 결과값 출력
 		System.out.println(Arrays.toString(intArr));
 		System.out.println(Arrays.toString(doubletArr));
 		System.out.println(Arrays.toString(stringArr));
-
 
 		// result
 		// [1, 2, 3, 4, 5]
@@ -77,10 +80,14 @@ public class Arrays1 {
 		// arr1 : [I@6f496d9f
 		// arr2 : [I@6f496d9f
 
+		// 이유 : 배열변수 arr2 는 arr1이 저장하고 있는 배열변수의 주소값을 넘겨 받아
+		// 서로 같은 배열을 바라보록 있어서 arr1,arr2는 사실상 같다.
+		System.out.println("arr1과 arr2는 같은가 : "+ (arr1==arr2));
+
 
 		// 깊은 복사
 		// 복사된 배열이나 원본 배열이 변경될 때 서로 간의 값이 바뀌지 않음
-		// Arrays.copyOf(배열, 복사범위)
+		// TODO Arrays.copyOf(배열, 복사범위) <-- 깊은 복사
 
 		System.out.println("배열의 깊은 복사");
 
@@ -91,7 +98,7 @@ public class Arrays1 {
 
 		arr4[0] = 10;
 		System.out.println("arr3 : "+Arrays.toString(arr3));
-		System.out.println("arr4 : "+Arrays.toString(arr4));
+		System.out.println("arr4 : "+Arrays.toString(arr4)); // arr4만 값이 변했다.
 
 		System.out.println("==========================================");
 

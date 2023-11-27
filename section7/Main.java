@@ -40,6 +40,7 @@ public class Main {
 		Family father = new Family();
 		Family son = new Family();
 
+//		System.out.println(Family.address);
 		System.out.println("아빠의 집 주소 : "+father.address);	// 아빠의 주소
 		System.out.println("아들의 집 주소 : "+son.address);			// 아들의 주소
 

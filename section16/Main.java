@@ -31,7 +31,6 @@ public class Main {
         // 기본 구조
         // ArrayList<데이터 타입> list = new ArrayList<>();
         ArrayList<String> list = new ArrayList<>();
-
         // 데이터 저장
         // void  add(E e) 또는 void  add(int index, E e) E는 우리가 정해놓은 데이터 타입
         list.add("딸기"); // 0 번쨰 인덱스
@@ -44,7 +43,7 @@ public class Main {
 
         System.out.println(list);
 
-        System.out.println("=================================================");
+        System.out.println("=1================================================");
 
         // 데이터 치환
         // void set(int index, E e)
@@ -62,7 +61,7 @@ public class Main {
 
         System.out.println(list);
 
-        // ==========================
+        System.out.println("======================ArrayList====================");
         ArrayList<Integer> list2 = new ArrayList<>();
         list2.add(1);
         list2.add(2);
