@@ -18,7 +18,7 @@ public class CardDeck {
     }
 
     public List<Card> generateCards(){  // 52가지 카드를 생성하는 메소드
-        List<Card> cards = new LinkedList<>();
+         cards = new LinkedList<>();
 
         for(String pattern : PATTERNS){ // 카드 모양(4가지) 총 52가지 카드를 생성함
             for(int i=1 ; i<= CARD_COUNT; i++){ // 1부터 13까지
@@ -54,5 +54,16 @@ public class CardDeck {
             sb.append("\n"); // 삽입 개생
         }
         return sb.toString();
+    }
+    public Card draw(){
+        Card selectedCard = getRandomCard();
+        cards.remove(selectedCard);
+        return selectedCard;
+    }
+    private Card getRandomCard(){
+        int size = cards.size();
+        int select = (int)(Math.random()*size); // 0부터 size-1사이의 난수 를 생성하여 select에 할당
+        return cards.get(select);
+
     }
 }
