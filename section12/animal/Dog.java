@@ -1,6 +1,6 @@
 package section12.animal;
 // 구현 클래스
-public class Dog implements FourLegAnimal {
+public class Dog implements FourLegAnimal {	// 구현 클래스 선언
 
 	int dogLeg = 4;
 	

@@ -1,4 +1,5 @@
 package section12.animal;
+// 인터페이스 연습
 
 public class Main {
 

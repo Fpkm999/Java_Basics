@@ -5,15 +5,18 @@ public class Main {
 	public static void main(String[] args) {
 
 		// 추상 클래스는 객체를 생성할 수 없다.
+//		Notebook notebook = new Notebook(); 객체가 추상클래스면 안된다
 		Galaxybook galaxybook = new Galaxybook();
 		Macbook macbook = new Macbook();
+		Notebook notebook = new Galaxybook(); //이건 된다.
 
 		// 자식 객체 생성
 		galaxybook.notebookBrand();
 		macbook.notebookBrand();
+		notebook.notebookBrand();
 
 		String fds = galaxybook.aaa;
-		System.out.println(fds);
+		System.out.println(fds);	// result : null
 	}
 
 }

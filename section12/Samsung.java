@@ -5,6 +5,7 @@ public class Samsung extends Phone{
 
 	@Override
 	public void phoneBrand(){
+//		super.phoneBrand(); 추상메서드는 이거 안된다.
 		System.out.println("삼성");
 	}
 	

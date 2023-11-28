@@ -1,5 +1,5 @@
 package section12.vehicle;
-
+// 인터페이스 연습
 public class Main {
 
 	public static void main(String[] args) {
