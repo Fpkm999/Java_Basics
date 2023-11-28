@@ -22,6 +22,7 @@ public class Main {
         //객체를 동등 비교("=="할 경우 해당 객체의 값을 비교 하는 것이 아니라 객체의 주소 값을 비교함
         //객체의 값을 비교할 때는 equals()
 
+        System.out.println("str 비교");
         String str1 = "hello";  // 실제 값을 저장
         String str2 = "hello"; // 실제 값을 저장
         String str3 = new String("hello"); // 주소 값을 저장
@@ -32,7 +33,7 @@ public class Main {
         System.out.println("str1.equals(str3) : " +str1.equals(str3));  // equals() 비교
         System.out.println("str2.equals(str3) : " +str2.equals(str3));  // equals() 비교
 
-        System.out.println("====================================================================");
+        System.out.println("===================toString() 메서드 테스트========================");
 
         // Object의 toString() 메서드
         // 객체의 정보를 문자열로 변환
@@ -45,21 +46,19 @@ public class Main {
         user.setUserId("lee");
         user.setUserPw("1234");
         System.out.println(user.toString());
+        System.out.println(user);
 
-        System.out.println("====================================================================");
-
+        System.out.println("==========CharAt() 메서드 테스트==================");
         // String 클래스의 CharAt() 메서드
         // 인덱스를 통해 원하는 위치의 문자를 문자열에서 추출
         String str = "Hello World";
         char charAt = str.charAt(2);    // 인덱스가 2인 자리에 문자 추출
         System.out.println("2번째 인덱스 문자 : "+charAt);
 
-        System.out.println("====================================================================");
-
+        System.out.println("=========indexOf() 메서드 테스트================");
         // String 클래스의 indexOf() 메서드
         // 문자열 중에서 특정 단어 또는 문장의 시작 위치를 알려 주는 메서드이다.
-
-
+        
         String str4 = "Hello World World";
 //        str4.indexof
 
@@ -74,7 +73,7 @@ public class Main {
             System.out.println("이 글에는 오세빈이라는 글자가 없습니다.");
         }
 
-        System.out.println("====================================================================");
+        System.out.println("==========replaceAll() 메서드 테스트================");
         // String 클래스의 replaceAll() 메서드
         // 특정 문자 및 문자열을 원하는 단어로 변경해줌
 

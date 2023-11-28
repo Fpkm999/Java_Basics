@@ -7,20 +7,16 @@ public class User {
     private String userPw;
         public void setUserId(String userId){
             this.userId = userId;
-
         }
         public String getUserId(){
            return userId;
         }
         public void setUserPw(String userPw){
             this.userPw = userPw;
-
         }
         public String getUserPw(){
            return  userPw;
        }
-
-
         @Override
         public String toString() {
         return "userID : " + userId + ", userPw : " +userPw;
