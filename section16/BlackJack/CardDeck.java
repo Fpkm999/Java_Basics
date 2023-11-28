@@ -3,6 +3,7 @@ package section16.BlackJack;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class CardDeck {
     private List<Card> cards;
@@ -29,7 +30,7 @@ public class CardDeck {
                 cards.add(card); // 카드의 모양과 숫자를 저장함
             }
         }
-        return cards;
+        return cards;   //돌려줌
     }
     public String numberToDenomination(int number){ /// 1~13의 숫자를 받으면 끗수를 정해주는 메소드
 
@@ -61,7 +62,7 @@ public class CardDeck {
         return selectedCard;
     }
     private Card getRandomCard(){
-        int size = cards.size();
+        int size = cards.size(); // 사이즈는 아마도 52일거고 인덱스이므로
         int select = (int)(Math.random()*size); // 0부터 size-1사이의 난수 를 생성하여 select에 할당
         return cards.get(select);
 

@@ -163,29 +163,29 @@ public class Main {
             }
         }
 
-        System.out.println("===========HashSet=============================");
+        System.out.println("===========HashSet====================");
 
         // HashSet
         // 기본구조
         // HashSet<데이터 타입> set = new HashSet<>();
-        HashSet<String> set = new HashSet<>();
+        HashSet<String> hashset = new HashSet<>();
 
         // 데이터 저장
         // 인덱스가 없기 때문에 인덱스를 이용한 저장은 없다.
         // void add(E e)
-        set.add("딸기");
-        set.add("바나나");
-        set.add("딸기");// set은 중복이 안되기 때문에 이건 안들어감
-
-        System.out.println(set); // toString 이 생략되어 있음
+        hashset.add("딸기");
+        hashset.add("바나나");
+        hashset.add("딸기");// hashset은 중복이 안되기 때문에 이건 안들어감
+        hashset.add("포도");
+        System.out.println(hashset); // toString 이 생략되어 있음
 
         // 데이터 삭제
         // void remove(Object o)
-        set.remove("딸기");
+        hashset.remove("딸기");
 
-        System.out.println(set);
-        System.out.println(set.size());
-        System.out.println(set.contains("딸기"));
+        System.out.println("set의 내용물 Open : "+hashset);
+        System.out.println("set의 사이즈 : "+hashset.size());
+        System.out.println("set에서 딸기가 있는지 여부 : "+hashset.contains("딸기"));
 
         // Map 컬렉션
 
@@ -194,7 +194,7 @@ public class Main {
         // 기본 구조
         // HashMap<KEY의 데이터 타입, VALUE의 데이터 타입> map = new HashMap<>(); <-- KEY와 VALUE 둘다 있기 때문
         HashMap<Integer,String> map = new HashMap<>();
-
+//               KEY   , VALUE
         // 데이터 삽입
         // void put(K key, V value)
         map.put(1,"봄");//key:1,value:봄
@@ -203,7 +203,7 @@ public class Main {
         map.put(4,"겨울");
         //자주 쓰이니까 잘 알아야 한다.
 
-        System.out.println(map);
+        System.out.println("map 출력 : "+map);
         // result
         // {1=봄, 2=여름, 3=가을, 4=겨울}
 
@@ -222,6 +222,7 @@ public class Main {
 
         map.remove(3,"가을");
         System.out.println(map);
+
 
         // KEY에 대응하는 VALUE 반환
         // V get (K KEY 값)  : 앞의 V는 벨류 K는 KEY값
