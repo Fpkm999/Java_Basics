@@ -1,5 +1,6 @@
 package section12.bluetooth;
-
+// 자식 인터페이스를 상속받은 클래스
+// 상속받은 추상 메서드 전부 재정의 해야한다.
 public class MicTest implements BluetoothMIC2 {
 
 	@Override
