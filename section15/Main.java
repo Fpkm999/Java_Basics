@@ -52,16 +52,17 @@ public class Main {
         // String 클래스의 CharAt() 메서드
         // 인덱스를 통해 원하는 위치의 문자를 문자열에서 추출
         String str = "Hello World";
+
         char charAt = str.charAt(2);    // 인덱스가 2인 자리에 문자 추출
         System.out.println("2번째 인덱스 문자 : "+charAt);
 
         System.out.println("=========indexOf() 메서드 테스트================");
         // String 클래스의 indexOf() 메서드
         // 문자열 중에서 특정 단어 또는 문장의 시작 위치를 알려 주는 메서드이다.
-        
+        String strTest1 = "Hello World World Jump";
         String str4 = "Hello World World";
 //        str4.indexof
-
+        System.out.println("World의 위치1 : "+strTest1.indexOf("World"));
         System.out.println("World의 위치 : "+str4.indexOf("World")); // 공백 포함
         // 0번째 인덱스 부터 검색
         System.out.println("World의 위치(10번째 인덱스부터) : " + str4.indexOf("World",10));
@@ -82,6 +83,8 @@ public class Main {
         String replaceStr4 = str4.replaceAll("World","JAVA");// World를 JAVA로 변경
         System.out.println(replaceStr4);
 
+        String replaceStrTest1 = strTest1.replaceAll("Jump","Dimitry");
+        System.out.println("replaeAll() 테스트 : "+replaceStrTest1);
 
         System.out.println("====================================================================");
         // String 클래스의 substring() 메서드
@@ -123,11 +126,15 @@ public class Main {
         // StringBuilder 와 StringBuffer
         // 문자열이 수정 되면 기존의 메모리 주소에 할당된 값이 변경
         StringBuilder str6 = new StringBuilder("안녕하세요");
+        StringBuilder str66 = new StringBuilder("이랏샤이마세"); // 테스트 StringBuilder
         System.out.println(str6); // 잘들어갔네. 여기까지는  String 과 다를게 없음
-
+        System.out.println(str66);
         // 문자열 삽입
         str6.append("반갑습니다."); // 문자열을 뒤에 삽입(안녕하세요  뒤에)
         System.out.println(str6);   // str자체가 변함
+
+        str66.append("-따자하오");   // 문자열 뒤에 삽입
+        System.out.println(str66);
 
         // 문자열 삭제
         str6.delete(0,5); // 인덱스 0 부터 5 전까지 삭제

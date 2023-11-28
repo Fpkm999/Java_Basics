@@ -5,11 +5,11 @@ public class Box<T> {
     private T t;
 
     // getter 메소드
-    public T get(){
+    public T getBox(){
         return t;
     }
     // setter 메소드
-    public void set(T t){
+    public void setBox(T t){
         this.t = t;
     }
 }
