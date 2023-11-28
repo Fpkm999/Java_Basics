@@ -13,10 +13,20 @@ public class Game {
         Rule rule = new Rule();
         CardDeck cardDeck = new CardDeck();
 
-        System.out.println(cardDeck.toString());
+        playingPhase(sc, cardDeck, gamer);
+//        System.out.println(cardDeck.toString());
         }
+        private void playingPhase(Scanner sc, CardDeck cardDeck, Gamer gamer){
+                String gamerInput;
+                while(true){
+                        System.out.println("카드를 뽑겠습니까? 종료를 원하시면 0을 입력하세요.");
+                        gamerInput = sc.nextLine();
 
-//        Card card = cardDeck.draw(); // 카드를 뽑는 메소드
-                // 남아 있는 카드 중 랜덤한 1개의 카드를 준다
-
+                        if("0".equals(gamerInput)){
+                                break;
+                        }
+                        Card card = cardDeck.draw();
+                        gamer.receiveCard(card);
+                }
+        }
 }

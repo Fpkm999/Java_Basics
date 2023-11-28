@@ -16,9 +16,21 @@ public class Gamer {
         cards = new ArrayList<>();
     }
     public void receiveCard(Card card){
-        this.cards.add(card);
+        this.cards.add(card);   // 카드를 뽑는 메소드
+        this.showCards(); // 카드를 받으면 보여주는 메소드
     }
+    public void showCards(){ // Gamer가 소유한 카드들의 목록을 보여줌
+        StringBuilder sb = new StringBuilder();
+        sb.append("현재 보유 카드 목록 \n");
+
+        for(Card card : cards){
+            sb.append(card.toString());
+            sb.append("\n");
+        }
+        System.out.println(sb.toString());
+    }
+
     public List<Card> OpenCards(){
-        return null;
+        return this.cards;
     }
 }
