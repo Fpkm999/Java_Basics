@@ -1,55 +1,53 @@
 package section16.BlackJack;
+// 카드덱
+// 조커를 제외한 52장의 카드를 포함
+
+/*
+카드뭉치(카드덱)
+    - 52개의 서로 다른 카드를 가짐
+    - 카드 1개를 뽑아준다.
+ */
+
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.regex.Pattern;
 
 public class CardDeck {
-    private List<Card> cards;
+  private List<Card> cards;
 
-    public Card getCard(){
-        return null;
-    } // Card 클래스 getCard
+  private static final String[] PATTERNS = {"spade","heart","diamond","club"};
+  private static final int CARD_COUNT = 13; // 카드 총 숫자
+  public CardDeck(){ // 생성자
+    cards = new ArrayList<>();
 
-    private static final String[] PATTERNS = {"spade","heart","diamond","club"};
-    private static final int CARD_COUNT = 13;
-    public CardDeck() { // CardDeck 생성자. 카드덱 객체를 생성하자 마자 52개의 서로 다른 카드가 만들어져야됨
-        cards = this.generateCards();
-    }
+    for(String pattern : PATTERNS){// 4번
+      for(int i =1; i<=CARD_COUNT; i++){ // 13번 = 총 52번 반복함
+        Card card = new Card();
+        String denomination;
 
-    public List<Card> generateCards(){  // 52가지 카드를 생성하는 메소드
-         List<Card> cards = new LinkedList<>();
-
-        for(String pattern : PATTERNS){ // 카드 모양(4가지) 총 52가지 카드를 생성함
-            for(int i=1 ; i<= CARD_COUNT; i++){ // 1부터 13까지
-                Card card = new Card(pattern,i);
-                cards.add(card); // 카드의 모양과 숫자를 저장함
-            }
+        if(i == 1){
+          denomination = "A";
+        } else if (i == 11){
+          denomination = "J";
+        } else if (i == 12){
+          denomination = "Q";
+        } else if (i == 13){
+          denomination = "K";
+        } else {
+          denomination = String.valueOf(i);
         }
-        return cards;   //돌려줌
+        card.setDenomination(denomination);
+        card.setPattern(pattern);
+        cards.add(card);
+        System.out.println("카드덱 소환"+cards.size());
+        System.out.println("카드덱 소환"+cards.toString());
+      }
     }
 
+  }
 
-    @Override
-    public String toString(){
-        StringBuilder sb = new StringBuilder();
 
-        for(Card card : cards){
-            sb.append((card.toString())); // 삽입 모양과 끗수
-            sb.append("\n"); // 삽입 개생
-        }
-        return sb.toString();
-    }
-    public Card draw(){
-        Card selectedCard = getRandomCard();
-        cards.remove(selectedCard);
-        return selectedCard;
-    }
-    private Card getRandomCard(){
-        int size = cards.size(); // 사이즈는 아마도 52일거고 인덱스이므로
-        int select = (int)(Math.random()*size); // 0부터 size-1사이의 난수 를 생성하여 select에 할당
-        return cards.get(select);
-
-    }
+  public Card getCard(){
+    return null;  //일단 null
+  }
 }
