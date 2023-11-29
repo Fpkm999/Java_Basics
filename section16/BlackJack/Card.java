@@ -12,7 +12,6 @@ public class Card {
     }
 
     public String numberToDenomination(int number) {
-
         if (number == 1) {
             return "A";
         } else if (number == 11){

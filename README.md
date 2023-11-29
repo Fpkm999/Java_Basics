@@ -30,7 +30,7 @@
 - section 11-2 :
 - section 12 : 추상메서드, 추상클래스, 인터페이스, 다중인터페이스 연습
 - section 12-2 : 다중 인터페이스 연습 문제
-- section 13 :
+- section 13 : 내부클래스(인스턴스클래스, 정적 클래스, 지역 클래스), 익명클래스
 - section 14 :
 - section 14-2 :
 - section 15 :

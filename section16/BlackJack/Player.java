@@ -3,9 +3,17 @@ package section16.BlackJack;
 import java.util.List;
 
 public interface Player {
-    void receiveCard(Card card);
+    String getname();
 
-    void showCards();
+    public abstract void receiveCard(Card card);
 
-    List<Card> openCards();
+    public abstract void showCards();
+
+    public abstract List<Card> openCards();
+
+    void turnOff();
+
+    void turnOn();
+
+    boolean isTurn();
 }

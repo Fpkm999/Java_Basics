@@ -3,7 +3,7 @@ package section16.BlackJack;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dealer {
+public class Dealer implements Player{
     /*
     딜러의 역할
     1. 추가로 카드를 받는다.
@@ -13,6 +13,24 @@ public class Dealer {
     * 게임의 승패를 판단은 Rule 객체가, 카드를 뽀는 것은 카드덱 객체가 맡아서 이렇게 할 수 있다.
      */
     private List<Card> cards;
+    private boolean turn;
+
+    @Override
+    public void turnOff(){
+        this.setTurn(false);
+    }
+    @Override
+    public void turnOn(){
+        this.setTurn(true);
+    }
+    @Override
+    public boolean isTurn(){
+        return this.turn;
+    }
+    private void setTurn(boolean turn){
+        this.turn = turn;
+    }
+
 
     private static final int CAN_RECEIVE_POINT = 16;
 
@@ -20,6 +38,12 @@ public class Dealer {
         cards = new ArrayList<>();
     }
 
+    @Override
+    public String getname() {
+        return null;
+    }
+
+    @Override
     public void receiveCard(Card card){ // 카드를 받는 메소드
         if(this.isReceiveCard()){
             this.cards.add(card);
@@ -40,7 +64,7 @@ public class Dealer {
         }
         return sum;
     }
-
+    @Override
     public void showCards(){ // dealer가 소유한 카드들의 목록을 보여줌
         StringBuilder sb = new StringBuilder();
         sb.append("현재 보유 카드 목록 \n");
@@ -52,7 +76,8 @@ public class Dealer {
         System.out.println(sb.toString());  // 가진 카드 수 만큼 출력함
     }
 
-    public List<Card> OpenCards(){  // 현재 갖고 있는 모든 카드들을 전달하는 역할
+    @Override
+    public List<Card> openCards(){  // 현재 갖고 있는 모든 카드들을 전달하는 역할
         return this.cards;
     }
     // 카드를 오픈하는 메소드
