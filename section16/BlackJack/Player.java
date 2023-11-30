@@ -1,19 +1,15 @@
 package section16.BlackJack;
-
+/*
+Gamer와 Dealer의 공통점인 receiveCard,
+showCards, openCards를 추상메소드로 갖고 있습니다.
+ */
 import java.util.List;
 
 public interface Player {
-    String getname();
 
-    public abstract void receiveCard(Card card);
+    void receiveCard(Card card);
 
-    public abstract void showCards();
+    void showCards();
 
-    public abstract List<Card> openCards();
-
-    void turnOff();
-
-    void turnOn();
-
-    boolean isTurn();
+    List<Card> openCards();
 }
