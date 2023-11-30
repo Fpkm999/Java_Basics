@@ -13,8 +13,34 @@ import java.util.List;
 
 public class Dealer implements Player {
     private List<Card> cards;
+    private boolean turn;
 
     private static final int CAN_RECEIVE_POINT = 16;
+    private static final String NAME = "딜러";
+
+    @Override
+    public void turnOff() {
+        this.setTurn(false);
+    }
+
+    @Override
+    public void turnOn() {
+        this.setTurn(true);
+    }
+
+    @Override
+    public boolean isTurn() {
+        return this.turn;
+    }
+
+    private void setTurn(boolean turn){
+        this.turn = turn;
+    }
+
+    @Override
+    public String getName() {
+        return NAME;
+    }
 
     public Dealer() {
         cards = new ArrayList<>();

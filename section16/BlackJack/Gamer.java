@@ -10,9 +10,34 @@ import java.util.List;
 
 public class Gamer implements Player{
     private List<Card> cards;   // 나의 카드 리스트
+    private boolean turn;
+    private String name;
 
-    public Gamer(){ // 생성자
-        cards = new ArrayList<>();
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public void turnOff(){
+        this.setTurn(false);
+    }
+    @Override
+    public void turnOn(){
+        this.setTurn(true);
+    }
+    @Override
+    public boolean isTurn(){
+        return this.turn;
+    }
+
+    public void setTurn(boolean turn){
+        this.turn = turn;
+    }
+
+    public Gamer(String name){ // 생성자
+        this.cards = new ArrayList<>();
+        this.name = name;
     }
     @Override
     public void receiveCard(Card card){

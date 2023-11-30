@@ -1,7 +1,7 @@
 package section16.BlackJack;
 /*
-Gamer와 Dealer의 공통점인 receiveCard,
-showCards, openCards를 추상메소드로 갖고 있습니다.
+Gamer 와 Dealer 의 공통점 인 receiveCard, showCards, openCards 를
+ 추상 메소드로 가지고 있다.
  */
 import java.util.List;
 
@@ -12,4 +12,12 @@ public interface Player {
     void showCards();
 
     List<Card> openCards();
+
+    void turnOff();
+
+    void turnOn();
+
+    boolean isTurn();
+
+    String getName();
 }
