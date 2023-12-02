@@ -9,6 +9,7 @@ public class ArrayListExample {
         List<Board> list = new ArrayList<>();
 
         // 객체 추가
+        // 생성자를 이용해서 subject, content, writer 초기화
         list.add(new Board("제목1,","내용1","글쓴이1"));
         list.add(new Board("제목2,","내용2","글쓴이2"));
         list.add(new Board("제목3,","내용3","글쓴이3"));
@@ -18,6 +19,7 @@ public class ArrayListExample {
 
         // 저장된 총 객체 수 얻기
         int size = list.size();
+        System.out.println("[저장된 ArrayList의 사이즈]");
         System.out.println("총 개수 : "+size);
         System.out.println();
 
@@ -37,7 +39,7 @@ public class ArrayListExample {
 
         // 객체 삭제
         list.remove(2);
-        list.remove(2);
+//        list.remove(2);
 
         for(Board b : list){
             System.out.println(b.getSubject()+"\t"+ b.getContent()+"\t" +b.getWriter());

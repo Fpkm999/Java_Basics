@@ -1,11 +1,14 @@
 package section16.Collection;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 // 제네릭을 사용한 클래스
 class MyGenericList<T> {
     private List<T> elements = new ArrayList<>();
+    private ArrayList<T> elements1 = new ArrayList<>();
+    private Collection<T> elements2 = new ArrayList<>();
 
     // 리스트에 요소 추가
     public void addElement(T element) {

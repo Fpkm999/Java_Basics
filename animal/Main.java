@@ -15,7 +15,8 @@ public class Main {
 		animalArr[0] = new Lion();
 		animalArr[1] = new Dog();
 		animalArr[2] = new Cat();
-		
+
+		animalArr[0].walk();
 //		int[] arr = new int[3];
 //		int a = 3;
 //		arr[0] = 3;

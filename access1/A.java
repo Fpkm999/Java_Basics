@@ -20,7 +20,5 @@ public class A {
 	void setD(int d) {
 		this.d = d; // 세터를 이용하니 d가 보인다.
 	}
-	
-	
-	
+
 }
