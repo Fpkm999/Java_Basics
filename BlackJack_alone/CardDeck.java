@@ -8,13 +8,9 @@ public class CardDeck {
     public static final  int MAX_CARD_HAP = 13;
     public static final String[]  PATTERN =  {"SPADE","HEART","CLUB","DIAMOND" };
 
-
-
-    // 카드 52장 생성
-    // 생성자
+    // 카드 52장 생성. 생성자를 이용함
     public CardDeck(){
          cards = this.GenerateCard();
-
     }
 private List<Card> GenerateCard() {
     List<Card> cards = new ArrayList<>();
@@ -23,7 +19,7 @@ private List<Card> GenerateCard() {
         for (int i = 1; i <= MAX_CARD_HAP; i++) { // 13
             Card card = new Card(); // 새로운 카드 객체 생성
             card.setPattern(String.valueOf(card_));
-            card.setDenomination(String.valueOf(i));
+            card.setDenomination(setTodDenomination(i));
             cards.add(card);
         }
     }
@@ -38,18 +34,27 @@ public Card createRandomCard() { // 0 ~13사이의 난수 1개 생성
 
 private static int INITCARD = 2;
 public void inItCard() { // 처음 카드 2장을 주는 기능
-
         for(int i = 0 ; i<INITCARD ; i++){ // 2번 돌림
-//            cards.add(draw());
+        cards.add(draw());
         }
 }
     // 카드를 뽑는 기능
-//public Card draw() {
-//    int cardss = createRandomCard();
-//
-//    Card cardDraw = (Card) cardss;
-//    return cardDraw;
-//}
+public Card draw() {
+    Card selectedCard = createRandomCard();
+    cards.remove(selectedCard);
+    return selectedCard;
+}
 
-
+public String setTodDenomination(int number) {
+    if (number == 1) {
+        return "A";
+    } else if (number == 11) {
+        return "J";
+    } else if (number == 12) {
+        return "Q";
+    } else if (number == 13) {
+        return "K";
+    }
+    return String.valueOf(number);
+    }
 }
