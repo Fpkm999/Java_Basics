@@ -6,11 +6,12 @@ import java.util.List;
 public class CardDeck {
     private List<Card> cards;
     public static final  int MAX_CARD_HAP = 13;
+    private int point;
     public static final String[]  PATTERN =  {"SPADE","HEART","CLUB","DIAMOND" };
 
     // 카드 52장 생성. 생성자를 이용함
     public CardDeck(){
-         cards = this.GenerateCard();
+         this.cards = this.GenerateCard();
     }
 private List<Card> GenerateCard() {
     List<Card> cards = new ArrayList<>();
@@ -18,8 +19,9 @@ private List<Card> GenerateCard() {
     for (String card_ : PATTERN) {// 4
         for (int i = 1; i <= MAX_CARD_HAP; i++) { // 13
             Card card = new Card(); // 새로운 카드 객체 생성
-            card.setPattern(String.valueOf(card_));
+            card.setPattern(card_);
             card.setDenomination(setTodDenomination(i));
+//            point = Integer.parseInt(setTodDenomination(i));
             cards.add(card);
         }
     }
@@ -57,4 +59,16 @@ public String setTodDenomination(int number) {
     }
     return String.valueOf(number);
     }
+
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+
+        for(Card card : cards){
+            sb.append(card.toString()+"\n");
+        }
+        return sb.toString();
+    }
+
+
 }

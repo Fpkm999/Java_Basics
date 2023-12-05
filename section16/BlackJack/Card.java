@@ -58,6 +58,6 @@ public class Card {
     }
 
     public int getPoint() {
-        return point;
+        return this.point;
     }
 }
