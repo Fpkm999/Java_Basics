@@ -10,6 +10,7 @@ import java.util.List;
 public class Gamer {
     private List<Card> cards;
     private String name;
+    private int point;
     public Gamer(String name){
         this.cards = new ArrayList<>();
         this.name = name;
@@ -35,5 +36,8 @@ public class Gamer {
     }
     public String getName(){
         return this.name;
+    }
+    public int getPoint(){
+        return this.point;
     }
 }

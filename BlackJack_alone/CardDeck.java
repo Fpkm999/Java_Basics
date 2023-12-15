@@ -21,32 +21,39 @@ private List<Card> GenerateCard() {
             Card card = new Card(); // 새로운 카드 객체 생성
             card.setPattern(card_);
             card.setDenomination(setTodDenomination(i));
-//            point = Integer.parseInt(setTodDenomination(i));
+            card.setPoint(setToPoint(i));
             cards.add(card);
         }
     }
     return cards;
 }
 
-public Card createRandomCard() { // 0 ~13사이의 난수 1개 생성
+public Card createRandomCard() { // 1 ~52 사이의 난수 1개 생성
     int cardSize = cards.size(); // 카드 사이즈
-    int randomCard = (int)(Math.random()*cardSize);
+    int randomCard = (int)(Math.random()*cardSize+1);
         return cards.get(randomCard);
         }
 
-private static int INITCARD = 2;
-public void inItCard() { // 처음 카드 2장을 주는 기능
-        for(int i = 0 ; i<INITCARD ; i++){ // 2번 돌림
-        cards.add(draw());
-        }
-}
+//private static int INITCARD = 2;
+//public void inItCard() { // 처음 카드 2장을 주는 기능
+//        for(int i = 0 ; i<INITCARD ; i++){ // 2번 돌림
+//        cards.add(draw());
+//        }
+//}
     // 카드를 뽑는 기능
 public Card draw() {
     Card selectedCard = createRandomCard();
     cards.remove(selectedCard);
     return selectedCard;
 }
-
+    public int setToPoint(int point){
+        if (point == 11 || point == 12 || point == 13) {
+            return 10;
+        }else {
+            this.point = point;
+        }
+        return point;
+    }
 public String setTodDenomination(int number) {
     if (number == 1) {
         return "A";
@@ -69,6 +76,4 @@ public String setTodDenomination(int number) {
         }
         return sb.toString();
     }
-
-
 }

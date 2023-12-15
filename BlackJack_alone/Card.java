@@ -36,10 +36,13 @@ public class Card {
 
     @Override
     public String toString() {
-        return "[패턴 = "+pattern+"][끗수 = "+denomination+"]"+"[총 합"+point+"]";
+        return "[패턴 = "+pattern+"][끗수 = "+denomination+"]"+"[포인트"+point+"]";
     }
 
     public int getPoint(){
         return this.point;
+    }
+    public  void setPoint(int point){
+        this.point += point;
     }
 }

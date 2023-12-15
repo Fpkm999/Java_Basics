@@ -16,17 +16,25 @@ public class Dealer {
     private static final int DEALERLIMIT = 16;
     private static final String DEALERNAME = "딜러";
     public void receiveCard(Card card){
-        this.cards.add(card);
-        this.showCards();
-        this.getPointSum(card);
+        if(this.point < DEALERLIMIT){
+            this.cards.add(card);
+            this.showCards();
+            SumPoint(getPoint());
+        }
+//        this.getPointSum(card);
+    }
+
+    private void SumPoint(int point) {
+        this.point += point;
     }
 
     public void showCards() {
         StringBuilder sb = new StringBuilder();
-        sb.append("현재 보유 카드 목록 \n");
+        sb.append("딜러님의 현재 보유 카드 목록 \n");
 
-        for(Card card1 : cards){
-            sb.append((card1.toString()+"\n"));
+        for(Card card : cards){
+//            sb.append((cards.toString()+"\n"));
+            sb.append(card.toString()+"\n");
         }
         System.out.println(sb.toString());
     }
@@ -41,13 +49,17 @@ public class Dealer {
     public String getDealername(){
         return DEALERNAME;
     }
-    public void getPointSum(Card card){
-        int sum = 0;
-        for (Card card1 : cards){
-            sum += card.getPoint();
-        }
+//    public void getPointSum(Card card){
+//        this.point
+//        int sum = 0;
+//        for (Card card1 : cards){
+//            sum += card.getPoint();
+//        }
+//    }
+    public int getPoint(){
+        return point;
     }
-    public void setPoint(){
+    public void setPoint(int point){
         if(point >= DEALERLIMIT){
             ON_OFF = true;
         }
