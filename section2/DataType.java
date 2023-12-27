@@ -33,8 +33,5 @@ public class DataType {
 		String k = "JAVA";
 		String l = "JAVA";
 		System.out.println(k==l);
-
-		
-		
 	}
 }
