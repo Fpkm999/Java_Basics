@@ -15,8 +15,8 @@ public class Ex01 {
 		double var3 = 2.5;
 		String var4 = "3.9";
 						//3 		//1		//2			//3
-		int result = (int)++var1 +(int)var2+(int)var3+ (int)(Double.parseDouble(var4));
 		int result2 = (int)var1 +(int)(var2+var3)+ (int)(Double.parseDouble(var4));
+		int result = (int)++var1 +(int)var2+(int)var3+ (int)(Double.parseDouble(var4));
 		System.out.println(result);//9
 		System.out.println(result2);//9
 		

@@ -20,9 +20,9 @@ public class Etc0201 {
 		System.out.println("int code : "+code); // 65
 		System.out.println("char ch2 : "+ch2); // A
 //		System.out.println(ch3);
-		System.out.println("ch3 : "+ch3); // D
+		System.out.println("Integer to Character : "+ch3); // D
 		
-		char ch4 = '가';
+		char ch4 = '가';	// 44032
 		int code3 = (int)ch4;
 		System.out.println(code3);
 		/*

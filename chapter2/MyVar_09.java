@@ -14,7 +14,7 @@ public class MyVar_09 {
 		/*
 		 * String 값이 소수점인 경우 int로 변환할려고 할 떄 java.lang.NumberFormatException 라는 오류가 발생한다.
 		 * 이유 : int는 소수점을 받아내지 못하기 때문이다.
-		 * 해결 방법 : double.parsedouble() 이나 Float.parseFloat())를 이용하면 된다.
+		 * 해결 방법 : double.parsedouble() 이나 Float.parseFloat()를 이용하면 된다.
 		 */
 		
 		// String -> 정수형
