@@ -3,16 +3,19 @@ package chapter2;
 public class Etc0201 {
 
 	public static void main(String[] args) {
-		
+		// char 타입 연습
 		// 문자를 숫자로
 		char ch = 'A'; 
 		int code = (int)ch; // ch에 저장된 값을 int 형으로 변환하여 저장한다. int는 4바이트 ch는 2바이트 이므로 자동 형변환이 일어난다.
-	
-		char ch2 = 65; // 숫자를 대입해도 된다. char문자 자료형은 아스키 코드(정수)랑 매핑이 되기 때문
-		
+		// (int)라고 명시하지 않아도 동일한 결과를 보여준다.
+
+		char ch2 = 65; // 숫자를 대입해도 된다. char 문자 자료형은 아스키 코드(정수)랑 매핑이 되기 때문
+		// 아스키 코드는 0~127의 7비트의 가량의 범위를 가짐.
+
 		int code2 = 68;
-		char ch3 = (char)code2;
-//		char ch3 = 65530;
+		char ch3 = (char)code2; // int 를 char로 형변환. 아스키코드 범위에 있기 때문에 문제없다. // D
+
+//		char ch3 = 65530; char은 0 ~ 65535 까지 
 //		char ch4 = "A"; 에러뜸. Type mismatch: cannot convert from String to char
 //		char ch5 = 'aB'; Invalid character constant
 		
